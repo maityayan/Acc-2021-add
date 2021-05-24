@@ -10,7 +10,7 @@ UF >>>
 # ./splunk add forward-server 192.168.72.135:9997
 
 # cd /opt/splunkforwarder/etc/system/local
-# cat output.conf 
+# cat outputs.conf 
 
 
 
