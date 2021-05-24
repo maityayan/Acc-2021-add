@@ -1,0 +1,40 @@
+>>>>> Splunk Installation <<<<<<<
+UF - 
+
+# cd /opt
+
+# wget -O splunkforwarder-8.2.0-e053ef3c985f-Linux-x86_64.tgz 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=8.2.0&product=universalforwarder&filename=splunkforwarder-8.2.0-e053ef3c985f-Linux-x86_64.tgz&wget=true'
+
+# ls 
+splunkforwarder-8.2.0-e053ef3c985f-Linux-x86_64.tgz
+
+# tar -xvzf splunkforwarder-8.2.0-e053ef3c985f-Linux-x86_64.tgz
+
+# ls 
+
+splunkforwarder 
+
+# cd splunkforwarder
+# pwd 
+/opt/splunkforwarder  --- $SPLUNK_HOME
+
+# cd bin 
+# pwd 
+/opt/splunkforwarder/bin 
+
+# ./splunk start --accept-license
+  ----- admin user name : admin
+  ----- admin password: 12345678
+  ----- confirm admin password : 12345678
+  
+  
+#   ./splunk status|stop|start|restart
+# ./splunk --version 
+
+# ./splunk enable boot-start 
+
+
+
+
+
+
