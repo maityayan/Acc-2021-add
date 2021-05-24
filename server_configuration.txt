@@ -29,7 +29,7 @@ CLI ---
 # cd /opt/splunk/bin
 # ./splunk enable listen 9997
 
-# cd /opt/splunkforwarder/etc/apps/<app_name>/local
+# cd /opt/splunk/etc/apps/<app_name>/local
 # cat inputs.conf 
 
 
@@ -81,7 +81,6 @@ Log in to SH >>> 192.168.72.137:8000 >>> Settings >>> Distributed Search >> Sear
 indexer host name along with management port ----- https://<idx_ip>:8089
                                             ------ admin username of the indexer : admin
 											----- admin password of the indexer : 12345678
-                      ----- confirm password : 12345678
 											
 
 
