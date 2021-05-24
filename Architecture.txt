@@ -1,0 +1,144 @@
+>>>>> Splunk Archiecture <<<<
+
+1) Universal Forwarder ( UF ) --- Splunk Universal Forwarder Package -- CLI
+
+Splunk Enterprise Package --- CLI + GUI
+
+2) Heavy Forwarder ( HF )
+
+- Parsing 
+
+this is akash
+this is raja
+this is sayan 
+
+
+
+this is akash
+
+this is raja
+
+this is sayan 
+
+this is akash | he is from delhi 
+this is raja  | he is from mumbai
+this is sayan | he is from hyderabad 
+
+
+this is akash 
+
+he is from delhi 
+this is raja  
+
+he is from mumbai
+this is sayan
+
+he is from hyderabad 
+
+Masking -----
+this is ayan and his acc number is 12345678
+this is rajesh and his acc number is 243253326
+this is sweety and her acc number is 24243535476
+
+
+this is ayan and his acc number is xxxx5678
+
+this is rajesh and his acc number is xxxx3326
+
+this is sweety and her acc number is xxxx5476
+
+- Filtering 
+
+this is ayan and he logged in from 198.34.56.16
+this is lakshmi and she logged out from 123.45.67.89
+this is akash and he logged in from 198.168.34.10
+
+
+
+
+this is ayan and he logged in from 198.34.56.16
+
+this is akash and he logged in from 198.168.34.10
+
+
+this is ayan and he logged in from 198.34.56.16
+this is lakshmi and she logged out from 123.45.67.89
+this is akash and he logged in from 198.168.34.10
+
+logindata ---
+this is ayan and he logged in from 198.34.56.16
+
+this is akash and he logged in from 198.168.34.10
+
+logoutdata --
+this is lakshmi and she logged out from 123.45.67.89
+
+
+3) Indexer ( IDX )
+
+-- indexes
+windows
+os 
+cisco
+juniper
+
+apple 
+facebook
+bmw
+
+os-apple  - 30 days
+os-facebook
+os-bmw
+
+chrome -- 
+
+---------- metadata -----
+                  host -- ipaddress/dns/hostname of the application server ( 198.78.90.12 , linux-ldap-001, linux.accenture.com )
+				  source --- Actual path of the data ( /tmp/a.txt , C:\Program Files\Application\Chrome\record.txt )
+				  sourcetype --- C:\Program Files\Application\Chrome\record.txt ---- txtlog
+				                C:\Program Files\Application\Chrome\history.txt
+								
+								C:\Program Files\Application\Chrome\record.json ---- jsonlog
+								C:\Program Files\Application\Chrome\history.json 
+4) Search Head ( SH )
+5) Deployment Server ( DS )
+
+
+6) License Master ( LM )
+
+--- License Stacking --- 5GB + 10GB = 15GB
+--- License Pooling ---
+
+Pool-A -- 14 GB  --- Indexers
+Pool-B -- 1 GB -- SH , DS 
+
+--- 5 times --- rolling period of 30 days 
+
+24th May --- 1
+25       ---- 2
+26        --- 3
+27    ------ 4
+28 ------ 5
+29 ----- violation 
+
+
+23th June 
+
+
+https://splunkonbigdata.com/2020/07/31/splunk-licensing-enforcement-vs-no-enforcement/
+
+ < 6.5 --- Enforcement License --- Indexing Countinues ---- Searching Blocked 
+ >= 6.5 --- No-Enforcement License --- Indexing Countinues --- Searching Countinues  --- Splunk can take legal action against your company 
+ 
+ 
+ License Master goes down ---- https://splunkonbigdata.com/2018/09/25/what-happens-when-license-master-goes-down/
+ > 72hours ------- Indexing Countinues ---- Searching Blocked 
+ 
+ License Expires ---- 
+
+Indexing Countinues ---- Searching Blocked 
+
+
+
+
+
