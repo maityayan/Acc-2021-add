@@ -1,0 +1,16 @@
+UF  - 192.168.72.134
+HF - 192.168.72.135
+IDX - 192.168.72.136
+SH - 192.168.72.137
+
+UF >>>
+
+# cd /opt/splunkforwarder/bin
+# ./splunk add forward-server <hf_ip>:9997
+# ./splunk add forward-server 192.168.72.135:9997
+
+# cd /opt/splunkforwarder/etc/system/local
+# cat output.conf 
+
+
+
