@@ -34,7 +34,37 @@ splunkforwarder
 # ./splunk enable boot-start 
 
 
+HF/IDX/SH 
 
+# cd /opt
+# wget -O splunk-8.2.0-e053ef3c985f-Linux-x86_64.tgz 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=8.2.0&product=splunk&filename=splunk-8.2.0-e053ef3c985f-Linux-x86_64.tgz&wget=true'
 
+# ls 
+splunk-8.2.0-e053ef3c985f-Linux-x86_64.tgz
+
+# tar -xvzf splunk-8.2.0-e053ef3c985f-Linux-x86_64.tgz
+
+# ls 
+
+splunk
+
+# cd splunk
+# pwd 
+/opt/splunk  --- $SPLUNK_HOME
+
+# cd bin 
+# pwd 
+/opt/splunk/bin 
+
+# ./splunk start --accept-license
+  ----- admin user name : admin
+  ----- admin password: 12345678
+  ----- confirm admin password : 12345678
+  
+  
+#   ./splunk status|stop|start|restart
+# ./splunk --version 
+
+# ./splunk enable boot-start 
 
 
