@@ -1,0 +1,20 @@
+----------------------------------------------------------------- Partial Masking -------------------------------------------
+
+This is ayan and he logged in from 198.168.34.56 using port 22
+This is raja and logged out from 189.72.34.10 using port 25
+This is Akshay and he logged in from 192.168.123.186 using port 678 
+
+
+
+
+(.*from\s+)(\d+\.\d+)(\.\d+\.\d+\s+\w+\s+\w+\s+)(\d)(\d+)
+    1          2          3                      4    5
+--------------------------------
+SEDCMD-partmask=s/(.*from\s+)(\d+\.\d+)(\.\d+\.\d+\s+\w+\s+\w+\s+)(\d)(\d+)/\1xxx.xxx\3x\5/g
+
+
+This is ayan and he logged in from xxx.xxx.34.56 using port x2
+
+This is raja and logged out from xxx.xxx.34.10 using port x5
+
+This is Akshay and he logged in from xxx.xxx.123.186 using port x78
