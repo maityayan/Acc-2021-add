@@ -44,10 +44,10 @@ TRANSFORMS-route = internalerrordata,systemerrordata
 # vi transforms.conf 
 [internalerrordata]
 REGEX=internal\s+error  ---- regex 
-DEST_KEY=_metaData:Index
+DEST_KEY=_MetaData:Index
 FORMAT=internal_error   ----- index name 
 
 [systemerrordata]
 REGEX=system\s+error
-DEST_KEY=_metaData:Index 
+DEST_KEY=_MetaData:Index 
 FORMAT=system_error 
