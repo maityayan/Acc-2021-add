@@ -1,0 +1,49 @@
+
+>>>>> Masking <<<<<
+HF >>>
+# cd $SPLUNK_HOME/etc/system/local
+# vi props.conf 
+
+[<sourcetype_name>]
+attribute=value 
+
+[host::<host_name>]
+
+[source::<source_name>]
+
+[testlog]
+SHOULD_LINEMERGE = false
+#LINE_BREAKER=(\||\[)
+
+---------
+this is ayan 
+this is raja 
+this is sanjay 
+AYAN is from kolkata 
+Ayan went to Delhi
+
+
+
+---------
+
+this is Akshay 
+
+this is raja 
+
+this is sanjay 
+
+Akshay is from kolkata
+
+Akshay went to Delhi
+
+
+[<sourcetype_name>]
+SEDCMD-<class_name> = s/<old_pattern>/<new_pattern>/g 
+
+
+[testlog]
+SHOULD_LINEMERGE = false
+SEDCMD-namemask = s/(?i)ayan/Akshay/g 
+
+
+
