@@ -1,0 +1,53 @@
+------------------------------------------------ Data Routing ------------------------
+
+
+This is server01 which is having some system error with code 012
+This is server02 which is having some system error with code 013
+This is server31 which is having some internal error with code 012
+This is server11 which is having some system error with code 02
+This is server21 which is having some internal error with code 012
+This is server04 which is having some errors 
+
+
+---------------------------
+internal_error >>
+This is server31 which is having some internal error with code 012
+
+This is server21 which is having some internal error with code 012
+
+system_error >>
+
+This is server01 which is having some system error with code 012
+
+This is server02 which is having some system error with code 013
+
+This is server11 which is having some system error with code 02
+
+training >>>
+
+This is server04 which is having some errors 
+
+
+
+>>>>> IDX ------
+Create two indexes in IDX called "internal_error" and "system_error"
+
+HF >>>>
+
+# vi props.conf
+
+[testlog]
+SHOULD_LINEMERGE = false 
+TRANSFORMS-route = internalerrordata,systemerrordata 
+
+ 
+# vi transforms.conf 
+[internalerrordata]
+REGEX=internal\s+error  ---- regex 
+DEST_KEY=_metaData:Index
+FORMAT=internal_error   ----- index name 
+
+[systemerrordata]
+REGEX=system\s+error
+DEST_KEY=_metaData:Index 
+FORMAT=system_error 
