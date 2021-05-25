@@ -1,0 +1,7 @@
+UF 
+>>>>>
+ /tmp/app
+ 
+ 
+Onboard the .xml format of data in "xmllog" sourcetype 
+Onboard the .log format of data in "log" sourcetype 
