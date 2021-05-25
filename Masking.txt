@@ -45,5 +45,34 @@ SEDCMD-<class_name> = s/<old_pattern>/<new_pattern>/g
 SHOULD_LINEMERGE = false
 SEDCMD-namemask = s/(?i)ayan/Akshay/g 
 
+---------------------------------------------------------------- Full Masking ----------------------
+
+This is ayan and his acc no is 12345678 and pan no is 234567
+This is sweety and her acc no is 22432425 and pan no is 2141542
+This is ramesh and his acc no is 09580258 and pan no is 4256536
+
+.*\s+\d+
+
+
+\w -- Word or Character 
+\s - space 
+\d - digit 
+? - 0 or 1 occurances 
++ - 1 or more occurances
+.* --- All 
+
+(\w+\s+\w+\s+\w+.*\s+)(\d+)(\s+.*\s+)(\d+)
+        1               2        3      4  
+
+SEDCMD-fullmask = s/(\w+\s+\w+\s+\w+.*\s+)(\d+)(\s+.*\s+)(\d+)/\1xxxx\3xxxx/g 
+-----------
+
+This is ayan and his acc no is xxxx and pan no is xxxx
+
+This is sweety and her acc no is xxxx and pan no is xxxx
+
+This is ramesh and his acc no is xxxx and pan no is xxxx
+
+
 
 
