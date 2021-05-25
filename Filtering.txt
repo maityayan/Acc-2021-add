@@ -1,0 +1,67 @@
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Filtering >>>>>>>>>>>>>>>>>>>>>>>
+
+this is ayan and he is from kolkata
+this is Raju and he is also from KOLKATA
+This is Akshay and he is from Mumbai 
+This is Ramesh and he is from Chennai 
+Kolkata is a big city 
+
+-----------------------
+
+this is ayan and he is from kolkata
+
+this is Raju and he is also from KOLKATA
+
+Kolkata is a big city 
+
+
+
+---------------------------------------------------------------
+
+HF >>>
+transforms.conf 
+
+# cd $SPLUNK_HOME/etc/system/local
+# vi transforms.conf 
+
+[<transformation_name>]
+attribute=value 
+
+
+props.conf 
+[<sourcetype>]
+TRANSFORMS-<class_name> = <transformation_name1>,<transformation_name2>.....
+
+
+# vi transforms.conf 
+
+[<transformation_name>]
+REGEX=
+DEST_KEY=
+FORMAT=
+
+------------------------------------------------------------
+
+
+# vi props.conf 
+
+[testlog]
+SHOULD_LINEMERGE = false 
+TRANSFORMS-filter = discard,take 
+
+
+
+# vi transforms.conf 
+
+
+[discard]
+REGEX=.
+DEST_KEY=queue
+FORMAT=nullQueue
+
+[take]
+REGEX=(?i)kolkata
+DEST_KEY=queue 
+FORMAT=indexQueue
