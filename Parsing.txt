@@ -1,0 +1,49 @@
+>>>>>>> Parsing <<<<<<
+
+HF >>>
+# cd $SPLUNK_HOME/etc/system/local
+# vi props.conf 
+
+[<sourcetype_name>]
+attribute=value 
+
+[host::<host_name>]
+
+[source::<source_name>]
+
+----------------------- Event Breaking ----------------
+
+i/p ---
+this is ayan 
+this is raja 
+this is sayan 
+
+
+
+o/p - 
+
+this is ayan 
+
+this is raja 
+
+this is sayan 
+
+
+# vi props.conf 
+
+[testlog]
+SHOULD_LINEMERGE = false
+
+
+# cd $SPLUNK_HOME/bin
+# ./splunk restart 
+
+
+
+
+
+
+
+
+
+
