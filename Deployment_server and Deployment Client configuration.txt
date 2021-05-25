@@ -13,6 +13,11 @@ CLI >>>>
 # ./splunk set deploy-poll https://<ds_ip>:8089
 # ./splunk set deploy-poll https://192.168.72.137:8089 
 
+
+# cd $SPLUNK_HOME/etc/system/local 
+# ls 
+deploymentclient.conf 
+
 Restart >>>
 DS >> Deployment Clients 
 
