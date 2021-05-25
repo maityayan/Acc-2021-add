@@ -38,12 +38,33 @@ SHOULD_LINEMERGE = false
 # cd $SPLUNK_HOME/bin
 # ./splunk restart 
 
+---------------------------------------------------------- Line Breaking -----------------------------------
+
+i/p ---
+this is ayan|he is from kolkata|
+ths is sayan[he is from mumbai[
+
+
+o/p - 
+
+this is ayan
+
+he is from kolkata
+
+ths is sayan
+
+he is from mumbai
 
 
 
+# vi props.conf 
+
+[testlog]
+SHOULD_LINEMERGE = false
+LINE_BREAKER=(\||\[)
 
 
-
-
+# cd $SPLUNK_HOME/bin
+# ./splunk restart 
 
 
