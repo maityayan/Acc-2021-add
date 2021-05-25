@@ -1,0 +1,28 @@
+this is ayan and he is from kolkata
+this is Raju and he is also from KOLKATA
+This is Akshay and he is from Mumbai 
+This is Ramesh and he is from Chennai 
+Kolkata is a big city 
+
+---------
+
+This is Akshay and he is from Mumbai 
+
+This is Ramesh and he is from Chennai 
+
+
+# vi props.conf 
+
+[testlog]
+SHOULD_LINEMERGE = false 
+TRANSFORMS-filter = discard 
+
+
+
+# vi transforms.conf 
+
+
+[discard]
+REGEX=(?i)kolkata 
+DEST_KEY=queue
+FORMAT=nullQueue
