@@ -1,0 +1,23 @@
+>>>>>>> Deployment Server Configuration <<<<<<<<<<<<<<
+SH|DS 
+
+CLI >>>>
+# cd $SPLUNK_HOME/bin 
+# ./splunk enable deploy-server 
+
+>>>>>>>>>>>>> Deployment Client Configuration <<<<<<<<<<<<<<<<
+UF|HF|IDX 
+
+CLI >>>>
+# cd $SPLUNK_HOME/bin
+# ./splunk set deploy-poll https://<ds_ip>:8089
+# ./splunk set deploy-poll https://192.168.72.137:8089 
+
+Restart >>>
+DS >> Deployment Clients 
+
+
+GUI >>> DS >>>
+
+Settings >> Forwarder Management >>
+
