@@ -1,0 +1,37 @@
+
+>>>>> Advance Data Onboarding <<<<<
+
+/tmp/application ----
+
+a.txt 
+b.txt 
+abc.txt 
+
+
+a.json 
+zz.json 
+t.json 
+
+
+UF >>>
+# cd $SPLUNK_HOME/etc/system/local 
+
+# vi inputs.conf 
+
+
+[monitor:///tmp/application/*.txt]
+index=training
+sourcetype=txtlog 
+
+[monitor:///tmp/application/*.json]
+index=training
+sourcetype=jsonlog 
+
+
+
+# cd $SPLUNK_HOME/bin 
+# ./splunk restart 
+
+
+
+
