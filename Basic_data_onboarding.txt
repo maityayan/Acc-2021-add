@@ -1,0 +1,31 @@
+>>>>>> Data Onboarding <<<< "main" is the splunk by default index name 
+
+UF >>>
+# cd $SPLUNK_HOME/etc/system/local 
+
+# vi inputs.conf 
+
+[monitor://<path of the log file>]
+index=<index_name>
+sourcetype=<sourcetype_name>
+
+
+[monitor:///tmp/a.txt]
+index=training
+sourcetype=testlog
+
+
+# cd $SPLUNK_HOME/bin 
+# ./splunk restart 
+
+
+[monitor://C:\Program Files\a.txt]
+
+
+IDX >>>
+
+Create an index "training"
+
+GUI >>> Settings >> Indexes >> New Index 
+
+Put "training" and save it.
