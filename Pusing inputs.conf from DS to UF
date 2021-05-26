@@ -1,0 +1,72 @@
+>>>>>>> Push Config File From DS<<<<<<<<<<<<<<<<<<
+DS 
+CLI >> App Creation 
+# cd $SPLUNK_HOME/etc/deployment-apps
+# mkdir acc_uf_inputs
+# cd acc_uf_inputs
+# mkdir local 
+# cd local
+# vi inputs.conf 
+
+[monitor:///var/log/secure]
+index=test
+sourcetype=securelog
+
+
+
+#  $SPLUNK_HOME/etc
+-------- deployment-apps 
+            ------ <app_name>
+			      ------- local 
+				        ------ inputs.conf | props.conf | transforms.conf 
+						
+						
+Serverclass Creation >>>
+
+# cd $SPLUNK_HOME/etc/system/local 
+#ls 
+
+ serverclass.conf 
+---------------------------------------------------------
+# vi serverclass.conf 
+
+[serverClass:<serverclass_name>]
+whitelist.0 = 
+blacklist.0 =
+
+
+[serverClass:<serverclass_name>:app:<app_name>]
+restartSplunkd = 
+restartSplunkWeb = 
+disabled = 
+---------------------------------------
+
+
+[serverClass:all_uf]
+whitelist.0 = 172.31.23.199
+
+[serverClass:all_uf:app:acc_uf_inputs]
+restartSplunkd = 1
+restartSplunkWeb = 0
+disabled = 1
+
+
+
+
+-----------------------------------
+Push the app from DS ----
+
+# cd $SPLUNK_HOME/bin 
+# ./splunk reload deploy-server 
+
+
+
+[serverClass:all_windows]
+whitelist.0 = *
+
+
+[serverClass:all_uf:app:acc_uf_inputs]
+machineTypesFilter=windows-*
+machineTypesFilter=linux-i686, linux-x86_64
+
+
