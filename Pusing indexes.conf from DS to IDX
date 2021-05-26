@@ -1,0 +1,31 @@
+DS 
+CLI >> App Creation 
+# cd $SPLUNK_HOME/etc/deployment-apps
+# mkdir all_indexes
+# cd all_indexes
+# mkdir local
+# cd local
+# vi indexes.conf 
+
+
+[training]
+coldPath = $SPLUNK_DB/training/colddb
+enableDataIntegrityControl = 0
+enableTsidxReduction = 0
+homePath = $SPLUNK_DB/training/db
+maxTotalDataSizeMB = 512000
+thawedPath = $SPLUNK_DB/training/thaweddb
+
+
+
+>>>
+# vi serverclass.conf 
+
+
+[serverClass:all_idx]
+whitelist.0 = 172.31.16.137
+
+[serverClass:all_idx:app:all_indexes]
+restartSplunkd = 1
+restartSplunkWeb = 0
+disabled = 0
