@@ -1,0 +1,58 @@
+----- Global Context -----
+#cd $SPLUNK_HOME/etc/system 
+                    ---- default --- 4 
+                    ---- local ---- 1
+
+
+[testlog]
+SHOULD_LINEMERGE = false
+
+
+# cd $SPLUNK_HOME/etc/apps/<app_name>
+                     ----- default  -- 3 
+					 ----- local --- 2 
+					 
+[testlog]
+SHOULD_LINEMERGE = true 					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+# cd $SPLUNK_HOME/etc/users/<user_name>/<app_name>
+                            ------ default 
+							----- local 
+							
+
+----------------------------------- App or User Context ---------------
+
+#cd $SPLUNK_HOME/etc/system 
+                    ---- default --- 6  
+                    ---- local ---- 5 
+
+
+[testlog]
+SHOULD_LINEMERGE = false
+
+
+# cd $SPLUNK_HOME/etc/apps/<app_name>
+                     ----- default  -- 4  
+					 ----- local --- 3  
+					 
+[testlog]
+SHOULD_LINEMERGE = true 					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+# cd $SPLUNK_HOME/etc/users/<user_name>/<app_name>
+                            ------ default -- 2 
+							----- local ---- 1
+
+
+https://docs.splunk.com/Documentation/Splunk/8.2.0/Admin/Wheretofindtheconfigurationfiles
