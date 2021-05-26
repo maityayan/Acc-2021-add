@@ -1,0 +1,12 @@
+>>>>> Enabling And Disabling <<<<<
+
+# cd $SPLUNK_HOME/etc/apps/<app_name>/local
+# vi apps.conf 
+
+[ui]
+is_visible = 0 | 1 
+
+[install]
+state = disabled | enabled 
+
+----- restart Splunk 
