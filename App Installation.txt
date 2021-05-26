@@ -1,0 +1,32 @@
+>>>>> Installing An App <<<<
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> GUI >>>>>
+
+1) Go to the Splunkbase.com >>> Find your app >> Download it >>
+ Go back to your splunk >> Click on the gear option ( Manage Apps ) on the top left corner in the app menu 
+ 
+ >>>> Select "Install from file"
+ >>> Upload app and save it 
+ 
+ 
+ ------ If restart required then give a restart -------
+ 
+ 
+ ------------------------------------------------------------------------------------------------------------------------------
+2) Go back to your splunk >> Click on the gear option ( Manage Apps ) on the top left corner in the app menu >>
+
+>>> Browse More apps >>> Find the App >> Install it >>> 
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>CLI >>>>>> Installation <<<<<<<
+
+Copy the app package from local machine >>> /tmp 
+
+# cd $SPLUNK_HOME/etc/apps 
+
+Copy the app file from /tmp to present dir 
+
+# cp /tmp/<app_package>.tgz .
+# tar -xvzf <app_package>.tgz 
+
+Restart Splunk
