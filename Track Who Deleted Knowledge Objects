@@ -1,0 +1,4 @@
+index=_internal "DELETE"
+| rex field=_raw mode=sed "s/\%20//g"
+| rex field=_raw ".*\/(?<AName>\w+)(\?output_mode\=json?|\s+)\w+.*"
+| stats values(AName) as "DeletedKnowledgeObjects" by user
