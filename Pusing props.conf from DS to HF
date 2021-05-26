@@ -1,0 +1,39 @@
+May 26 05:27:33 ip-172-31-23-199 sshd[4048]: Disconnected from 61.177.173.33 port 41070 [preauth]
+
+(.*from\s+)(\d+\.\d+\.\d+\.\d+)(\s+port.*)
+
+  1             2                3
+
+
+
+DS 
+CLI >> App Creation 
+# cd $SPLUNK_HOME/etc/deployment-apps
+# mkdir all_parsing
+# cd all_parsing
+# mkdir local
+# cd local
+# vi props.conf 
+
+[securelog]
+SEDCMD-ipmask=s/(.*from\s+)(\d+\.\d+\.\d+\.\d+)(\s+port.*)/\1xxx.xxx.xxx.xxx\3/g 
+
+[testlog]
+
+
+[jsonlog]
+
+
+
+
+# vi serverclass.conf 
+
+
+[serverClass:all_hf]
+whitelist.0 = 172.31.29.109
+
+[serverClass:all_hf:app:all_parsing]
+restartSplunkd = 1
+restartSplunkWeb = 0
+disabled = 0
+
