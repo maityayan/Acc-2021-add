@@ -1,0 +1,38 @@
+
+CLI >>>>>> App Upgradation <<<<<<<
+
+Copy the app package from local machine >>> /tmp 
+
+# cd $SPLUNK_HOME/bin
+# ./splunk stop 
+
+# cd $SPLUNK_HOME/etc/apps 
+
+Copy the app file from /tmp to present dir 
+
+# cp /tmp/<new_app_package>.tgz .
+
+------ Take the backup of the older version ----
+
+# tar -cvf <app_name>_backup_<date>.tgz <app_name>
+
+----------------------- Untar --------------
+
+# tar -xvzf <new_app_package>.tgz 
+
+#Start Splunk
+
+--------------------------- App Deleting -----------
+
+# cd $SPLUNK_HOME/bin
+# ./splunk stop 
+
+# cd $SPLUNK_HOME/etc/apps 
+
+------ Take the backup of the older version ----
+
+# tar -cvf <app_name>_backup_<date>.tgz <app_name>
+
+# rm -rf <app_name>
+
+Start Splunk 
