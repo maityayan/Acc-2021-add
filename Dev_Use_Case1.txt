@@ -1,3 +1,9 @@
 index=_internal sourcetype=splunkd_ui_access | table method,status | dedup method,status
 
 --- Dicard all the vales in 3xx
+---
+Ans: --
+
+index=_internal sourcetype=splunkd_ui_access | table method,status | dedup method,status | search status<300 OR status>399
+
+
