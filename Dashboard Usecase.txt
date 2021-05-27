@@ -4,7 +4,7 @@ index=_internal
 sourcetype=splunkd_ui_access 
 
 ---------------------------------------
-5 Panels ------
+4 Panels ------
 
 1) Top 5 files accessed -- Column Chart
 2) Successful Http Requests Count --- Single Value
