@@ -1,0 +1,10 @@
+| makeresults | fields - _time | eval num="23,12,34,56,24,34,56,78,11,244,55,22", num=split(num,",") |mvexpand num
+
+Q -- get the 4th,5th and 6th row
+
+o/p --
+
+num
+56
+24
+34
