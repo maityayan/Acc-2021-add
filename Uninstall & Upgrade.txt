@@ -6,7 +6,7 @@
 # rm -rf splunk 
 
 
-------------------- Renstall Splunk ---------
+------------------- Reinstall Splunk ---------
 
 # cd /opt
 # tar -xvf splunk_backup.tgz 
