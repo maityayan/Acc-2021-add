@@ -1,0 +1,35 @@
+>>>>>>> Unistall Splunk <<<<<<<
+# cd $SPLUNK_HOME/bin
+# ./splunk stop
+# cd /opt 
+# tar -cvf splunk_backup.tgz splunk
+# rm -rf splunk 
+
+
+------------------- Renstall Splunk ---------
+
+# cd /opt
+# tar -xvf splunk_backup.tgz 
+# cd $SPLUNK_HOME/bin
+# ./splunk start 
+
+
+-------------------------------------------------------------------------------------------
+
+>>>>>>> Upgrade Splunk <<<<<<<<<<<<<
+# cd $SPLUNK_HOME/bin
+# ./splunk stop
+# cd /opt 
+# tar -cvf splunk_backup.tgz splunk
+
+Download  new version of splunk 
+
+# tar -xvf splunk_new_version.tgz 
+
+# cd $SPLUNK_HOME/bin
+# ./splunk start --accept-license 
+
+
+
+
+
