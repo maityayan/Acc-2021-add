@@ -18,6 +18,15 @@ CLI >>>>
 # ls 
 deploymentclient.conf 
 
+# vi deploymnetclient.conf 
+
+
+-------- append the below 2 lines ------------
+[deploymnet-client]
+clientName=<deployment_cleint_name>
+
+-----------------------------------------
+
 Restart >>>
 DS >> Deployment Clients 
 
