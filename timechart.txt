@@ -1,0 +1,1 @@
+index=_internal sourcetype=splunkd_ui_access | timechart count | eval threshold="950"
