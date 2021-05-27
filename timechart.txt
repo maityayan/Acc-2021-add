@@ -1,1 +1,12 @@
 index=_internal sourcetype=splunkd_ui_access | timechart count | eval threshold="950"
+
+
+span=1m 
+
+s - second 
+m - minute
+h - hour 
+d - day
+w - week
+mon - month 
+y - year 
