@@ -12,3 +12,6 @@ num
 
 Ans : -- 
 | makeresults | fields - _time | eval num="23,12,34,56,24,34,56,78,11,244,55,22", num=split(num,",") |mvexpand num | head 6 | tail 3 | reverse
+
+Ans: ---
+| makeresults | fields - _time | eval num="23,12,34,56,24,34,56,78,11,244,55,22", num=split(num,",") |mvexpand num | head 6 | reverse | head 3 | reverse
