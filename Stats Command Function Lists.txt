@@ -1,0 +1,2 @@
+index=_internal sourcetype=splunkd_ui_access 
+| stats count,sum(status) as summ,avg(status) as average,min(status) as mini, max(status) as maximum,dc(status) as distinct,values(status) as distinct_values by method
