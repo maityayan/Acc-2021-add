@@ -1,0 +1,56 @@
+
+
+>>>>>>> Schedule Report <<<<<<<<<
+ * * * * *
+ Minutes Of an hour ( 0 - 59 )
+   Hour of a day ( 0 - 23 )
+	 Day of a month ( 1 - 31 )
+	   Month of a year ( 1 - 12 )
+	     Day of a week ( 0 - 7 )
+		 
+
+Minutes -----
+
+10 * * * *  ---- 6:10 , 7:10 , 8:10 
+10,20,30 * * * * ---- 6:10,6:20,6:30,7:10,7:20,7:30 .........
+*/5 * * * * --- Every 5 min 
+
+Hour ----
+
+0 6 * * * --- 6 am 
+0 */2 * * * ---- Every 2 hours -- 12,2,4,6,8....
+0 1,3,5,7,9,11,13,15,17,19,23 * * * --- 1,3,5,7.......
+0 10-14 * * * ---- 10 am --- 2 pm
+
+Day Of a month ------
+
+0 7 1 * *   - every 1st day of all months at 7 am 
+0 10 1,28 * * --- 1st and 28th day every month 10am 
+0 6 */15 * * ---- Every 15 days at 6am 
+
+Month of a year ----
+
+30 6 31 1 * ---- 31st Jan 6:30 am 
+0 10 25 1,12 * ---- 25th Jan and Dec at 10 am 
+
+Days of a week --
+
+0,7 -- Sun
+1 - Mon
+2 - Tue 
+3 - Wed
+4 - Thu 
+5 - Fri 
+6 - Sat 
+
+----
+0 17 * * 6  ---  Sat 5 pm 
+0 10 * * 1,5 
+
+------------------------------------------------
+
+
+
+
+
+			 
