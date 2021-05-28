@@ -1,0 +1,49 @@
+
+>>>>> Concurrent Search <<<<<< 
+
+( Limits.conf )
+
+Total Concurrent Searches = Base Max Searches + ( No. of Cores * No. of Searches per core )
+                          =  6               + ( No. Of Cores * 1 )
+						 
+
+2 core cpu 2+6=8 
+
+6:0 --- am 
+
+
+FIFO -- First In First Out 
+
+Schedule Priority 
+a
+b  
+c 
+d 
+e -- skipped
+f -- skipped
+g 
+h 
+i  --- Highest
+k  --- Higher 
+
+Schedule Window ---
+10 mins 
+
+6 --- 6:10 ----
+
+a
+b  
+c 
+d 
+e 
+f 
+g 
+h 
+i  --- Highest
+k  --- Higher 
+
+
+
+https://splunkonbigdata.com/2018/09/03/how-to-configure-email-alerting-using-gmail-smtp-in-splunk/
+
+Webhook --- https://docs.splunk.com/Documentation/Splunk/8.2.0/Alert/Webhooks
