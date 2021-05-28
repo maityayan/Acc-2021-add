@@ -1,0 +1,5 @@
+| tstats count from datamodel=Network_Traffic by All_Traffic.src ,All_Traffic.action,All_Traffic.src_port,All_Traffic.dest
+
+------
+Find out the sources which are having more that 5 open allowed ports 
+
