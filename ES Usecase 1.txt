@@ -3,3 +3,7 @@
 ------
 Find out the sources which are having more that 5 open allowed ports 
 
+
+| tstats count from datamodel=Network_Traffic by All_Traffic.src ,All_Traffic.action,All_Traffic.src_port,All_Traffic.dest 
+| rename All_Traffic.* as * | search action="allowed"  | stats dc(src_port) as open_ports_count,values(src_port) as open_ports by src | search open_ports_count >= 5
+
