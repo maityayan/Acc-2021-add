@@ -1,0 +1,13 @@
+>>>>> Concurrent Search <<<<<< 
+
+( Limits.conf )
+
+Total Concurrent Searches = Base Max Searches + ( No. of Cores * No. of Searches per core )
+                          =  6               + ( No. Of Cores * 1 )
+						 
+						 
+0 === 6 
+1 === 7
+2 === 8
+
+https://splunkonbigdata.com/2020/07/21/concurrent-historical-searches-in-splunk/
