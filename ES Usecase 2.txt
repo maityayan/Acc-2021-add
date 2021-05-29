@@ -1,0 +1,8 @@
+| tstats count from datamodel=Malware by Malware_Attacks.signature,Malware_Attacks.src 
+| rename Malware_Attacks.* as * 
+| stats dc(signature) as threat_count,values(signature) as signature by src 
+| search threat_count > 2
+
+
+
+-------- Multiple Malwares Detected On the Endpoint - Ayan
