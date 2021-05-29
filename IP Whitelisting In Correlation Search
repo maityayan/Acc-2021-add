@@ -1,0 +1,16 @@
+| tstats summariesonly=true dc(Malware_Attacks.signature) as "infection_count" from datamodel="Malware"."Malware_Attacks" by "Malware_Attacks.dest" 
+| rename "Malware_Attacks.dest" as "dest" 
+| lookup host_whitelist_muliple_infection.csv ip as dest 
+| search NOT whitelist="yes" 
+| fields - whitelist 
+| where 'infection_count'>1
+
+
+---------
+
+
+| inputlookup host_whitelist_muliple_infection.csv
+
+ip	           whitelist
+69.80.0.18    	no
+200.6.134.23	  yes
