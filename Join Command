@@ -1,0 +1,10 @@
+index=main sourcetype=bro_dns 
+    | stats values(query_type) as query_type by src 
+| join type=left src
+    [| search index=main sourcetype=bro_dhcp NOT src="172.0.0.1" | table src_ip,signature| dedup  src_ip,signature | rename src_ip as src  ]
+    
+    
+    index=main sourcetype=bro_dns 
+    | stats values(query_type) as query_type by src 
+| join type=inner src
+    [| search index=main sourcetype=bro_dhcp  | table src_ip,signature| dedup  src_ip,signature | rename src_ip as src  ]
