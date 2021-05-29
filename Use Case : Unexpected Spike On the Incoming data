@@ -1,0 +1,6 @@
+index=_internal sourcetype=splunkd_ui_access earliest="-1d@d" latest="-0d@d" 
+| stats count as yesterday_count by user 
+| append 
+    [| search index=_internal sourcetype=splunkd_ui_access earliest="-0d@d" latest="now" 
+    | stats count as today_count by user ] 
+| stats values(*) as * by user | eval today_pct=round(('today_count'/('today_count'+'yesterday_count'))*100,2) | search today_pct > 50
