@@ -12,5 +12,5 @@
 | inputlookup host_whitelist_muliple_infection.csv
 
 ip	           whitelist
-69.80.0.18    	no
+69.80.0.18    	 no
 200.6.134.23	  yes
