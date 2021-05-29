@@ -1,0 +1,12 @@
+index=_internal sourcetype=splunkd_ui_access NOT user="-" 
+| replace "200" with "blocked" in status 
+| rename status as action 
+| search action="blocked" 
+| bin span=10m _time 
+| stats count by user,_time 
+| search count > 50 
+| stats list(_time) as time,list(count) as count by user 
+| convert ctime(time) | eval repeat_count=mvcount(time) | search repeat_count > 2
+
+
+---------------- Do the schedule for every 30 mins ------
